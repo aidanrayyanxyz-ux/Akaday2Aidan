@@ -1,0 +1,230 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aidan Rayyan | Profile</title>
+  <!-- Boxicons for clean icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background layers (gradient follows scroll, glows follow scroll + cursor) -->
+  <div class="bg-gradient"></div>
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape s1" data-depth="1" data-phase="0"></span>
+    <span class="shape s2" data-depth="1.4" data-phase="2"></span>
+    <span class="shape s3" data-depth="0.8" data-phase="4"></span>
+    <span class="shape s4" data-depth="1.2" data-phase="1"></span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header / Navbar -->
+  <header class="header">
+    <a href="#home" class="logo">Profile<span>.</span></a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active" data-i18n="nav_about">About me</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#hobby" data-i18n="nav_hobby">Hobby</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+
+      <!-- Language switch + background music, right next to Contact -->
+      <div class="nav-tools">
+        <button type="button" class="tool-btn lang-btn" id="lang-toggle" aria-label="Switch language">
+          <i class="bx bx-world"></i><span class="lang-label">EN</span>
+        </button>
+        <button type="button" class="tool-btn music-btn" id="music-toggle" aria-label="Play music" aria-pressed="false">
+          <i class="bx bx-volume-mute"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About me (Home) Section -->
+  <section class="home" id="home">
+    <div class="home-content reveal from-left">
+      <h3 data-i18n="hero_hello">Hello, It's Me</h3>
+      <h1>Aidan Rayyan</h1>
+      <h3><span data-i18n="hero_and">And I'm a</span> Student at Universitas Pembangunan Jaya
+         <span class="multiple-text"></span></h3>
+      <p data-i18n="hero_p">
+        A student who loves learning new things, working carefully with data, and exploring the world
+        — one game, one recipe and one trip at a time.
+      </p>
+      <div class="home-buttons">
+        <a href="#contact" class="btn" data-i18n="btn_contact">Contact Me</a>
+        <a href="#skills" class="btn btn-outline" data-i18n="btn_skills">My Skills</a>
+      </div>
+    </div>
+
+    <div class="home-img reveal from-right">
+      <div class="img-ring"></div>
+      <!-- Put your photo next to index.html and name it profile.jpg -->
+      <img src="mukague.jpeg" alt="Aidan Rayyan" />
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2 class="heading reveal" data-i18n-html="skills_heading">My <span>Skills</span></h2>
+
+    <div class="skills-wrap">
+      <div class="skills-group glass reveal from-left">
+        <h3 class="group-title"><i class="bx bx-heart"></i> <span data-i18n="soft_title">Soft Skills</span></h3>
+        <div class="soft-grid stagger">
+          <div class="soft-item reveal"><i class="bx bx-refresh"></i><span data-i18n="soft_adapt">Adaptability</span></div>
+          <div class="soft-item reveal"><i class="bx bx-check-shield"></i><span data-i18n="soft_resp">Responsibility</span></div>
+          <div class="soft-item reveal"><i class="bx bx-group"></i><span data-i18n="soft_team">Teamwork</span></div>
+          <div class="soft-item reveal"><i class="bx bx-shuffle"></i><span data-i18n="soft_flex">Flexibility</span></div>
+          <div class="soft-item reveal"><i class="bx bx-bulb"></i><span data-i18n="soft_open">Open-Mindedness</span></div>
+          <div class="soft-item reveal"><i class="bx bx-time-five"></i><span data-i18n="soft_patience">Patience</span></div>
+          <div class="soft-item reveal"><i class="bx bx-smile"></i><span data-i18n="soft_humility">Humility</span></div>
+        </div>
+      </div>
+
+      <div class="skills-group glass reveal from-right">
+        <h3 class="group-title"><i class="bx bx-laptop"></i> <span data-i18n="hard_title">Hard Skills</span></h3>
+        <div class="hard-list stagger">
+          <div class="hard-item reveal">
+            <div class="hard-top"><i class="bx bx-spreadsheet"></i> Google Sheets</div>
+            <div class="bar"><div class="bar-fill" data-level="85"></div></div>
+          </div>
+          <div class="hard-item reveal">
+            <div class="hard-top"><i class="bx bx-palette"></i> Canva</div>
+            <div class="bar"><div class="bar-fill" data-level="80"></div></div>
+          </div>
+          <div class="hard-item reveal">
+            <div class="hard-top"><i class="bx bx-data"></i> <span data-i18n="hard_data">Data entry</span></div>
+            <div class="bar"><div class="bar-fill" data-level="90"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobby Section -->
+  <section class="hobby" id="hobby">
+    <span class="float-emoji e1" aria-hidden="true">🎮</span>
+    <span class="float-emoji e2" aria-hidden="true">🔬</span>
+    <span class="float-emoji e3" aria-hidden="true">🍳</span>
+    <span class="float-emoji e4" aria-hidden="true">✈️</span>
+
+    <h2 class="heading reveal" data-i18n-html="hobby_heading">My <span>Hobbies</span></h2>
+
+    <div class="hobby-grid stagger">
+      <div class="hobby-card reveal">
+        <div class="hobby-inner glass">
+          <div class="hobby-icon"><i class="bx bx-game"></i></div>
+          <h3 data-i18n="hobby1_title">Gaming</h3>
+          <p class="hobby-sub" data-i18n="hobby1_sub">Bermain Game</p>
+          <p data-i18n="hobby1_desc">Relaxing, sharpening strategy, and having fun with friends.</p>
+          <div class="tags">
+            <span data-i18n="hobby1_t1">Strategy</span>
+            <span data-i18n="hobby1_t2">Co-op</span>
+            <span data-i18n="hobby1_t3">Chill</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal">
+        <div class="hobby-inner glass">
+          <div class="hobby-icon"><i class="bx bx-search-alt"></i></div>
+          <h3 data-i18n="hobby2_title">Research</h3>
+          <p class="hobby-sub" data-i18n="hobby2_sub">Riset &amp; Penelitian</p>
+          <p data-i18n="hobby2_desc">Digging into topics, comparing sources, and finding out how things really work.</p>
+          <div class="tags">
+            <span data-i18n="hobby2_t1">Curious</span>
+            <span data-i18n="hobby2_t2">Analytical</span>
+            <span data-i18n="hobby2_t3">Detail</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal">
+        <div class="hobby-inner glass">
+          <div class="hobby-icon"><i class="bx bx-restaurant"></i></div>
+          <h3 data-i18n="hobby3_title">Cooking</h3>
+          <p class="hobby-sub" data-i18n="hobby3_sub">Memasak</p>
+          <p data-i18n="hobby3_desc">Trying new recipes, experimenting with flavours, and sharing good food.</p>
+          <div class="tags">
+            <span data-i18n="hobby3_t1">Recipes</span>
+            <span data-i18n="hobby3_t2">Flavour</span>
+            <span data-i18n="hobby3_t3">Creative</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-card reveal">
+        <div class="hobby-inner glass">
+          <div class="hobby-icon"><i class="bx bx-world"></i></div>
+          <h3 data-i18n="hobby4_title">Traveling</h3>
+          <p class="hobby-sub" data-i18n="hobby4_sub">Jalan-Jalan</p>
+          <p data-i18n="hobby4_desc">Discovering new places, cultures and stories beyond the daily routine.</p>
+          <div class="tags">
+            <span data-i18n="hobby4_t1">Adventure</span>
+            <span data-i18n="hobby4_t2">Culture</span>
+            <span data-i18n="hobby4_t3">Views</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolling ticker (JS clones the group so it loops seamlessly) -->
+    <div class="marquee reveal" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span data-i18n="hobby1_title">Gaming</span><span>✦</span>
+          <span data-i18n="hobby2_title">Research</span><span>✦</span>
+          <span data-i18n="hobby3_title">Cooking</span><span>✦</span>
+          <span data-i18n="hobby4_title">Traveling</span><span>✦</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 class="heading reveal" data-i18n-html="contact_heading">Contact <span>Me!</span></h2>
+
+    <p class="contact-sub reveal" data-i18n="contact_sub">Find me on</p>
+    <div class="social-media reveal">
+      <a href="https://www.instagram.com/aidannrb_?evlk=YmRja205eGk1eXZr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/aidan-rayyan-2793aa3b8?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+      <!-- TODO: replace # with your Snapchat profile link -->
+      <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Snapchat"><i class="bx bxl-snapchat"></i></a>
+      <a href="https://wa.me/6281411040700" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+    </div>
+
+    <form id="contact-form" class="reveal">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Full Name" data-i18n-placeholder="ph_name" required />
+        <input type="email" name="email" placeholder="Email Address" data-i18n-placeholder="ph_email" required />
+      </div>
+      <div class="input-box">
+        <input type="tel" name="phone" placeholder="Mobile Number" data-i18n-placeholder="ph_phone" />
+        <input type="text" name="subject" placeholder="Email Subject" data-i18n-placeholder="ph_subject" required />
+      </div>
+      <textarea name="message" cols="30" rows="8" placeholder="Your Message" data-i18n-placeholder="ph_message" required></textarea>
+      <button type="submit" class="btn" data-i18n="btn_send">Send Message</button>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p data-i18n="footer_text">Copyright © 2026 by Aidan Rayyan | All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-iconTop">
+      <a href="#home" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
